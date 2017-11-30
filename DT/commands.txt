@@ -1,0 +1,24 @@
+// Ask them to choose one of the following, but not more than one!
+// How many hours, minutes, days, weeks, months, years do they want to subtract
+// from current time
+
+//Then run this command bassed on input above:
+// N represents the number of days or etc they chose. Let it stay as a integer only
+
+choice = {minutes, hours, days, weeks, months, years}
+date --date="N <choice> ago" +%Y/%m/%d,%H:%M:%S
+
+// This command will output the argument to pass in the following: <output>
+
+// Also, let them choose a lat, long or default to the one below
+
+gcc gpssim.c -lm -O3 -o gps-sdr-sim
+./gps-sdr-sim -e brdc3540.14n -l 30.286502,120.032669,100 -t <output> -T <output>
+bladeRF-cli -s bladerf.script
+
+
+
+
+
+
+
