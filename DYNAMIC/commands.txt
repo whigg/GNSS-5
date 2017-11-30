@@ -1,0 +1,13 @@
+// Some how give commands for them to create their own sketch maybe?
+// Perhaps allow the to give a start and ending location(lat,long), then we do the rest.
+gcc nmea2um.c -lm -O3 -o nmea2um
+./nmea2um nmea.txt userTest.csv
+
+
+// If not, just load this example or give them the choice to choose from shapes like the circle
+// We could make a few more easily to add in as options
+
+gcc gpssim.c -lm -O3 -o gps-sdr-sim
+./gps-sdr-sim -e brdc3540.14n -u satgen/userTest.csv 
+bladeRF-cli -s bladerf.script
+
