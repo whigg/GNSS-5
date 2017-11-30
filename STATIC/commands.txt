@@ -1,0 +1,7 @@
+// Lets give them a option to choose the I/Q and lat,long in interface?
+// -b <value> where value is 1,8 or 16
+
+gcc gpssim.c -lm -O3 -o gps-sdr-sim
+./gps-sdr-sim -e brdc3540.14n -l 30.286502,120.032669,100 
+bladeRF-cli -s bladerf.script
+
